@@ -22,10 +22,7 @@ restService.post('/echo', function(req, res) {
 
 restService.post('/service', function(req, res) {
     
-    var request = require("request");
-    var link = "http://google.com/";
 
-    
     var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     var myword = speech;
     
@@ -33,18 +30,14 @@ restService.post('/service', function(req, res) {
         case "light on":
             // Blah
             
-            request("http://www.sitepoint.com", function(error, response, body) {
-              console.log(body);
-            });
+
             
             myword = "ok the light is on";
             break;
         case "light off":
             // Blah
             
-            request("http://www.sitepoint.com", function(error, response, body) {
-              console.log(body);
-            });
+
             
             myword = "ok the light is off";
             break;
