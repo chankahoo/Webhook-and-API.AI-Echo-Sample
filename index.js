@@ -33,14 +33,8 @@ restService.post('/service', function(req, res) {
         case "light on":
             // Blah
             
-            request({
-              uri: link + "lighton",
-              method: "GET",
-              timeout: 10000,
-              followRedirect: true,
-              maxRedirects: 10
-              }, function(error, response, body) {
-                console.log(body);
+            request("http://www.sitepoint.com", function(error, response, body) {
+              console.log(body);
             });
             
             myword = "ok the light is on";
@@ -48,14 +42,8 @@ restService.post('/service', function(req, res) {
         case "light off":
             // Blah
             
-            request({
-              uri: link + "lightoff",
-              method: "GET",
-              timeout: 10000,
-              followRedirect: true,
-              maxRedirects: 10
-              }, function(error, response, body) {
-                console.log(body);
+            request("http://www.sitepoint.com", function(error, response, body) {
+              console.log(body);
             });
             
             myword = "ok the light is off";
